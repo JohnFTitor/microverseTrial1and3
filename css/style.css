@@ -31,10 +31,16 @@ body {
 #projects {
     text-align: center;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 27, 27);
 }
 
 #projects h1{
     font-size: 2.5rem;
+    color: rgb(27, 121, 63);
 }
 
 .project-tile {
@@ -42,6 +48,7 @@ body {
     width: 300px;
     height: 400px;
     padding: 5px;
+    padding-bottom: 20px;
     margin: 50px;
     background-color: rgb(3, 75, 75);
     text-align: center;
@@ -57,13 +64,20 @@ body {
 
 .project-tile h2{
     color: white;
+    font-size: 2rem;
 }
 
 #all-tiles {
+    width: 100%;
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     height: auto;
+    align-items: center;
+    justify-items: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(49deg, rgba(255,255,255,1) 0%, rgba(114,171,121,1) 38%, rgba(22,103,32,1) 64%, rgba(13,66,4,1) 100%, rgba(84,124,184,1) 100%, rgba(48,60,105,1) 100%);
+
 }
 
 #navbar {
@@ -99,9 +113,28 @@ a{
     padding-top: 30px;
 }
 
+.links a {
+    color: white;
+    font-size: rem;
+}
+
 @media screen and (max-width: 480px){
     #welcome-section{
         font-size: 2.5rem;
     }
+}
 
+@media screen and (max-width: 350px) {
+    .project-tile {
+        width: 80vw;
+        aspect-ratio: 3/4;
+        height: auto;
+    }
+
+    .all-tiles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
